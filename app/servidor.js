@@ -5,6 +5,7 @@ const morgan = require("morgan")
 
 // Importamos las rutas de la app
 const loginRutas = require("./routes/login.routes")
+const notasRutas = require("./routes/notas.routes")
 
 // Aplicamos el objeto de la aplicacion
 const app = express()
@@ -24,6 +25,7 @@ app.use(express.static(path.join(__dirname, "public")))
 
 // Usamos las rutas importadas
 app.use(loginRutas)
+app.use(notasRutas)
 
 // Exportamos el objeto de la aplicación
 module.exports = app

@@ -1,4 +1,11 @@
 extends ./plantilla
 
-block  contenido
-	h1 Login de la aplicacion
+block  navegacion
+
+	nav(class="navbar navbar-dark bg-dark")
+		div(class="container")
+			h1(class="display-4 text-white") FENIX
+			small(class="text-white ml-2") Sistema de Login
+			a(class="navbar-brand ml-auto" href="/")
+				img( src="iconos/logo.png" width="40" height="40" alt="FENIX")
+				span FENIX

@@ -4,14 +4,41 @@ html(lang='es')
 		meta(charset='utf-8')
 		title Prueba Login
 		meta(name="viewport" content="width=device-width, initial-scale=1.0")
-		link(href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/journal/bootstrap.min.css" rel="stylesheet")
+		link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/spacelab/bootstrap.min.css" )
+		link(rel="stylesheet" href="css/main.css")
 	body
+
+		block navegacion
+
+			nav(class="navbar navbar-expand-lg navbar-dark bg-dark")
+				div(class="container")
+					a(class="navbar-brand" href="/")
+						img( src="iconos/logo.png" width="40" height="40" alt="FENIX")
+						span FENIX
+					button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#miBarra" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation")
+						span(class="navbar-toggler-icon")
+					div(class="collapse navbar-collapse" id="miBarra")
+						ul(class="navbar-nav ml-auto")
+							li(class="nav-item dropdown active")
+								a(class="nav-link dropdown-toggle" href="#" id="misNotas" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Notas
+								div(class="dropdown-menu" aria-labelledby="misNotas")
+									a(class="dropdown-item" href="/notas") Ver Notas
+									a(class="dropdown-item" href="/crear-nota") Agregar Notas
+							li(class="nav-item dropdown active")
+								a(class="nav-link dropdown-toggle" href="#" id="misUsuarios" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Usuarios
+								div(class="dropdown-menu" aria-labelledby="misUsuarios")
+									a(class="dropdown-item" href="#") Ver Usuarios
+									a(class="dropdown-item" href="#") Agregar Usuarios
+							li(class="nav-item")
+								a(class="nav-link" href="#")
+									img( src="iconos/cerrarSesion.png" width="30" height="30" alt="Cerrar Sesion")
+									small(class="pl-2") Cerrar Sesion
 
 		block  contenido
 
-		// ----Jquery Bootstrap 4
-		script(src="https://code.jquery.com/jquery-3.4.1.slim.min.js")
-		// ----Popper de Bootstrap 4
-		script(src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js")
-		// ----JavaScript de BBotstrap 4
-		script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js")
+	// ----Jquery Bootstrap 4
+	script(src="https://code.jquery.com/jquery-3.4.1.slim.min.js")
+	// ----Popper de Bootstrap 4
+	script(src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js")
+	// ----JavaScript de BBotstrap 4
+	script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js")
